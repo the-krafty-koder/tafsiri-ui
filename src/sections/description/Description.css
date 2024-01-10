@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.headline,
+.tag {
+    font-size: 8vh;
+    color: rgba(239, 239, 240, 0.8);
+}
+
+.tag {
+    color: rgba(139, 109, 237, 0.8);
+}
+
+.description {
+    font-family: "Jost";
+    max-width: 38vw;
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgba(239, 239, 240, 0.9);
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
