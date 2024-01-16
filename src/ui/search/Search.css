@@ -1,0 +1,23 @@
+.input {
+    min-height: 15vh;
+    border-bottom: solid 1px rgba(239, 239, 240, 0.1);
+}
+
+.parameters, .search, .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parameters {
+    padding-left:2.5vw;
+}
+
+.label {
+    color: white;
+    font-family: 'Jost';
+}
+
+.resultsList {
+    min-height: 75vh;
+}

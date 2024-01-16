@@ -1,0 +1,24 @@
+.section {
+    min-height: 100vh;
+}
+
+.webSearch {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgba(239, 239, 240, 0.9);
+}
+
+.italics {
+    font-family: 'Rubik Doodle Shadow';
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(139, 109, 237, 0.8);
+    padding: .5vw;
+}
+
+.downloadIcon {
+    background-color: rgba(139, 109, 237);
+    max-width: 10vw;
+    font-family: 'Jost';
+}

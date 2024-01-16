@@ -1,0 +1,26 @@
+.container {
+    min-height: 90vh;
+    margin-left: 16vw;
+    color: rgba(239, 239, 240, 0.8)
+}
+
+.demoText {
+    max-width: 30vw;
+    color: rgba(239, 239, 240, 0.8);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.borderLine {
+    border-bottom: groove 10px rgba(139, 109, 237, 0.8);
+    max-width: 35vw;
+}
+
+.borderLineTop {
+    border-bottom: dashed 10px rgba(139, 109, 237, 0.8);
+}
+
+.borderLineBottom {
+    border-top: dashed 10px rgba(139, 109, 237, 0.8);
+}

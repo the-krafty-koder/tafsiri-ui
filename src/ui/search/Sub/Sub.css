@@ -1,0 +1,21 @@
+.result {
+    margin: 4vh;
+    min-height: 15vh;
+    min-width: 40vw;
+    border: solid 2px  rgba(239, 239, 240, 0.1);
+}
+
+.resultContent {
+
+    min-height: 15vh;
+    border-left: dashed 10px  rgba(239, 239, 240, 0.1);
+    border-right: solid 2px rgba(239, 239, 240, 0.1);
+    padding: 8px;
+    padding-left: 15px;
+}
+
+.download, .resultContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

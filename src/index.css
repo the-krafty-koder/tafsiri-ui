@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background-color: #151718;
+    color: white;
     font-family: "Jost";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
