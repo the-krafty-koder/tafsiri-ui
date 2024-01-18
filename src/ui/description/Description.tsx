@@ -22,6 +22,7 @@ const Description = () => {
                         fontFamily: "Jost",
                         backgroundColor: "rgba(139, 109, 237, .8)",
                     }}
+                    href="https://github.com/the-krafty-koder/tafsiri/blob/master/tafsiri.gif"
                 >
                     Demo
                 </Button>
@@ -29,6 +30,7 @@ const Description = () => {
                     variant="contained"
                     startIcon={<ImportContactsIcon />}
                     sx={{ fontFamily: "Jost", backgroundColor: "#212526" }}
+                    href="https://github.com/the-krafty-koder/tafsiri"
                 >
                     Documentation
                 </Button>

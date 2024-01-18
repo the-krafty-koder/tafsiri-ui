@@ -143,7 +143,7 @@ const Search = () => {
                                         });
                                     }}
                                     sx={{ fontFamily: "Jost" }}
-                                >
+                                                                    >
                                     {Object.entries(languages).map(
                                         ([language, code]) => {
                                             return (

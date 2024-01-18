@@ -1,9 +1,8 @@
 import "./Sub.css";
-import { Alert, Button, Grid, IconButton, Snackbar, Stack } from "@mui/material";
+import { Alert, IconButton, Snackbar, Stack, Grid } from "@mui/material";
 import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOfflineOutlined";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import { Subtitle } from "./types";
-import HelpIcon from '@mui/icons-material/Help';
 import fetchDownloadUrl from "../../../core/downloader/fetchDownloadUrl";
 import { useState } from "react";
 import { CancelOutlined, HelpOutlineRounded } from "@mui/icons-material";
@@ -24,7 +23,7 @@ const Sub = ({
         if(!downloadUrl){
             setOpenToast(true)
         } else{
-            // await downloadSubtitle(release, downloadUrl)
+            await downloadSubtitle(release, downloadUrl)
         }
     }
 

@@ -1,4 +1,4 @@
-import { Button, Grid, Stack } from "@mui/material";
+import { Button, Grid, Link, Stack } from "@mui/material";
 import "./Footer.css";
 import SubtitlesIcon from "@mui/icons-material/Subtitles";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -32,7 +32,9 @@ const Footer = () => {
                 <Grid item xs={8}>
                     <Stack direction="row" spacing={1} className="footerLogo">
                         <SubtitlesIcon className="logoImage" />
-                        <h3>tafsiri</h3>
+                        <h3>
+                            <Link href="/" sx={{textDecoration: "none", color: 'white'}}>tafsiri</Link>
+                        </h3>
                         <Button
                             href="https://github.com/the-krafty-koder/tafsiri"
                             className="githubButton"
