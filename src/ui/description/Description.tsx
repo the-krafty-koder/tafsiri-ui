@@ -11,7 +11,7 @@ const Description = () => {
             </Stack>
 
             <div className="description">
-                Tafsiri is an open source tool <br /> that lets you download
+                Sytch is an open source tool <br /> that lets you download
                 subtitles for your favourite shows/movies from the command-line
                 in multiple languages
             </div>

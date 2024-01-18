@@ -17,7 +17,7 @@ const Navigation = () => {
                             href="/"
                             sx={{ textDecoration: "none", color: "#8b6ded" }}
                         >
-                            tafsiri
+                            Sytch
                         </Link>
                     </h3>
                 </Stack>
@@ -99,7 +99,7 @@ const Navigation = () => {
                             fontFamily: "Jost",
                         }}
                     >
-                        <span>Try Tafsiri</span>
+                        <span>Try Sytch </span>
                     </Button>
                 </Stack>
             </Grid>

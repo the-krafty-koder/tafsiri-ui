@@ -18,7 +18,7 @@ const Footer = () => {
                     sx={{background: 'rgba(139, 109, 237)'}}
                 >
                     {" "}
-                    Try Tafsiri
+                    Try Sytch
                 </Button>
             </Stack>
 
