@@ -1,7 +1,5 @@
 import { Button, Grid, Stack } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
 import "./SearchSection.css";
-import darkTheme from "./Search";
 import webSearch from "../../assets/webSearch.gif";
 import { ArrowCircleRightOutlined } from "@mui/icons-material";
 
@@ -40,7 +38,7 @@ const SearchSection = () => {
                 </Stack>
             </Grid>
             <Grid item xs={7}>
-                <img src={webSearch} alt="web-search-image"></img>
+                <img src={webSearch} alt="web-search"></img>
             </Grid>
         </Grid>
     );

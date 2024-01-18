@@ -1,7 +1,5 @@
 import queryString from "query-string";
-import { languages } from "../common_languages";
 import { Subtitle } from "../../ui/search/Sub/types";
-import { Language } from "@mui/icons-material";
 const apiUrl =
     "https://api.opensubtitles.com/api/v1/subtitles";
 

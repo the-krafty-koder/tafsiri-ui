@@ -12,18 +12,16 @@ import {
     Alert,
     Snackbar,
 } from "@mui/material";
-import { Language, Search as SearchIcon } from "@mui/icons-material";
+import { Search as SearchIcon } from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { z } from "zod";
-import Result from "./Sub/Sub";
 import glassImage from "../../assets/glass.gif";
 import Footer from "../footer/Footer";
 import searchInOpen from "../../core/fetcher/searchInOpen";
 import SubsList from "./SubsList/SubsList";
 import { Subtitle } from "./Sub/types";
 import { languages } from "../../core/common_languages";
-import { error } from "console";
 
 export const darkTheme = createTheme({
     palette: {
@@ -60,9 +58,9 @@ const Search = () => {
         });
         if (!validated.success) {
             const errors: string[] = [];
-            validated.error.errors.map(({ message, path }) => {
-                errors.push(`${path}:${message}`);
-            });
+            validated.error.errors.map(({ message, path }) => 
+                errors.push(`${path}:${message}`)
+            );
             setErrors(errors);
         }else{
             setBackdrop(true);
