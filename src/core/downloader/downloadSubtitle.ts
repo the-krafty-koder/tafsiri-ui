@@ -1,5 +1,3 @@
-import { getHeaders } from "../commands";
-
 const downloadSubtitle = (title: string, url: string) => {
     const headers = new Headers();
     headers.set("X-User-Agent", "Tafsiri V1");

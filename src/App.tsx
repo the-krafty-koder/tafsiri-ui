@@ -6,7 +6,6 @@ import Search from "./ui/search/Search";
 import Description from "./ui/description/Description";
 import SearchSection from "./ui/search/SearchSection";
 import Footer from "./ui/footer/Footer";
-import createAuthToken from "./authentication/createAuthToken";
 
 const Home = () => {
     return (
@@ -18,16 +17,6 @@ const Home = () => {
             <Footer />
         </div>
     );
-};
-
-const setAuthToken = async () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-        const createdToken = await createAuthToken();
-        if (createdToken) {
-            localStorage.setItem("token", createdToken);
-        }
-    }
 };
 
 function App() {
