@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div>
             <Navigation />
-            <Description/>
+            <Description />
             <SearchSection />
             <Demo />
             <Footer />
@@ -22,23 +22,20 @@ const Home = () => {
 
 const setAuthToken = async () => {
     const token = localStorage.getItem("token");
-    if(!token) {
+    if (!token) {
         const createdToken = await createAuthToken();
-        if(createdToken){
+        if (createdToken) {
             localStorage.setItem("token", createdToken);
         }
-        
     }
-}
+};
 
 function App() {
-    setAuthToken();
-
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='' element={<Home />} />
-                <Route path="search" element={<Search/>}/>
+                <Route path="" element={<Home />} />
+                <Route path="search" element={<Search />} />
             </Routes>
         </BrowserRouter>
     );

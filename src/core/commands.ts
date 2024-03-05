@@ -15,4 +15,13 @@ const validateLanguage = (language: string) => {
     return true;
 };
 
+export const getHeaders = () => {
+    const headers = new Headers();
+    headers.set("X-User-Agent", "Tafsiri V1");
+    headers.set("Content-Type", "application/json");
+    headers.set("API-Key", "TGFH3Kfz1S7ZJFckfWkZuiMTXljUPzBU");
+    headers.set("Accept", "application/json");
+    return headers;
+};
+
 export { validateLanguage };
