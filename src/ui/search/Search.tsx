@@ -192,7 +192,7 @@ const Search = () => {
                                     >
                                         <Typography>
                                             {" "}
-                                            No results found{" "}
+                                            No results found.{" "}
                                         </Typography>
                                         <img
                                             src={emptyImage}
