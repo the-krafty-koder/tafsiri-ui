@@ -11,12 +11,14 @@ import {
     MenuItem,
     Alert,
     Snackbar,
+    Typography,
 } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { z } from "zod";
 import glassImage from "../../assets/glass.gif";
+import emptyImage from "../../assets/search.png";
 import Footer from "../footer/Footer";
 import searchInOpen from "../../core/fetcher/searchInOpen";
 import SubsList from "./SubsList/SubsList";
@@ -44,10 +46,19 @@ const Search = () => {
         language: "",
     });
 
+    const firstRender = useRef(true);
+
     const [backdrop, setBackdrop] = useState(false);
     const [errors, setErrors] = useState<string[]>([]);
     const [results, setResults] = useState<{ data: Subtitle[] }>({ data: [] });
+    const [submitClicked, setSubmitClicked] = useState(false);
 
+    useEffect(() => {
+        if (firstRender.current) {
+            firstRender.current = false;
+            return;
+        }
+    });
     const handleSubmit = async () => {
         const { season, episode, language, title } = values;
         const validated = inputSchema.safeParse({
@@ -58,21 +69,21 @@ const Search = () => {
         });
         if (!validated.success) {
             const errors: string[] = [];
-            validated.error.errors.map(({ message, path }) => 
+            validated.error.errors.map(({ message, path }) =>
                 errors.push(`${path}:${message}`)
             );
             setErrors(errors);
-        }else{
+        } else {
             setBackdrop(true);
         }
 
-        
         const newSubs = await searchInOpen({
             ...values,
             episode: parseInt(values.episode),
             season: parseInt(values.season),
         });
         setResults(newSubs);
+        setSubmitClicked(true);
         setBackdrop(false);
     };
 
@@ -141,7 +152,7 @@ const Search = () => {
                                         });
                                     }}
                                     sx={{ fontFamily: "Jost" }}
-                                                                    >
+                                >
                                     {Object.entries(languages).map(
                                         ([language, code]) => {
                                             return (
@@ -169,13 +180,34 @@ const Search = () => {
                 <Grid item xs={2}></Grid>
                 <Grid className="parameters" item xs={8}>
                     <Stack direction="column">
-                        {results.data.length > 0 ? (
-                            <SubsList subtitles={results?.data || []} />
+                        {submitClicked ? (
+                            <>
+                                {results.data.length > 0 ? (
+                                    <SubsList subtitles={results?.data || []} />
+                                ) : (
+                                    <Stack
+                                        display="flex"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                    >
+                                        <Typography>
+                                            {" "}
+                                            No results found{" "}
+                                        </Typography>
+                                        <img
+                                            src={emptyImage}
+                                            alt="search-placeholder"
+                                        ></img>
+                                    </Stack>
+                                )}
+                            </>
                         ) : (
-                            <img
-                                src={glassImage}
-                                alt="search-placeholder"
-                            ></img>
+                            <>
+                                <img
+                                    src={glassImage}
+                                    alt="search-placeholder"
+                                ></img>
+                            </>
                         )}
                     </Stack>
                 </Grid>

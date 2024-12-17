@@ -6,7 +6,6 @@ interface Props {
 }
 
 const SubsList = ({ subtitles }: Props) => {
-    console.log(subtitles)
     return (
         <>
             {subtitles.map((sub: Subtitle) => (

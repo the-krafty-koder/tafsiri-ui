@@ -40,8 +40,8 @@ const searchInOpen = async (parameters: {
         url: apiUrl,
         query: {
             query: title,
-            season_number: episode,
-            episode_number: season,
+            season_number: season,
+            episode_number: episode,
             languages: language,
             page: 1,
             per_page: 10,

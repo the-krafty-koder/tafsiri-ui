@@ -17,9 +17,9 @@ const validateLanguage = (language: string) => {
 
 export const getHeaders = () => {
     const headers = new Headers();
-    headers.set("X-User-Agent", "Tafsiri V1");
+    headers.set("X-User-Agent", "Sytch v1");
     headers.set("Content-Type", "application/json");
-    headers.set("API-Key", "TGFH3Kfz1S7ZJFckfWkZuiMTXljUPzBU");
+    headers.set("API-Key", process.env.REACT_APP_OPEN_SUBTITLES_API_KEY!);
     headers.set("Accept", "application/json");
     return headers;
 };
