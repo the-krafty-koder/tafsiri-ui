@@ -1,6 +1,6 @@
 # Description
 
-The website for the Tafsiri command line application.
+The web version for the Tafsiri command line application. View it here [Sytch](https://sytch.madebywayne.site)
 
 ## Tech
 
